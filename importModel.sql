@@ -43,8 +43,9 @@ CREATE TABLE natureculture(
 #------------------------------------------------------------
 
 CREATE TABLE lot(
-        ID_lot   Int  Auto_increment  NOT NULL ,
-        type_lot Varchar (50) NOT NULL
+        ID_lot            Int  Auto_increment  NOT NULL ,
+        type_lot          Varchar (50) NOT NULL ,
+        surface_carre_lot Float NOT NULL
 	,CONSTRAINT lot_PK PRIMARY KEY (ID_lot)
 )ENGINE=InnoDB;
 
@@ -74,9 +75,7 @@ CREATE TABLE adresse(
         ID_adresse      Int  Auto_increment  NOT NULL ,
         ID_ville        Varchar (50) NOT NULL ,
         numero_voie     Varchar (50) NOT NULL ,
-        type_voie       Varchar (50) NOT NULL ,
         voie            Varchar (50) NOT NULL ,
-        btq             Varchar (50) NOT NULL ,
         ID_propriete    Int NOT NULL ,
         ID_ville_situe2 Int NOT NULL
 	,CONSTRAINT adresse_PK PRIMARY KEY (ID_adresse)
